@@ -41,3 +41,9 @@ For each page:
 
     ./concordance_app.py Example\ book\ -\ excerpt\ from\ Hamlet.txt
 
+## Testing
+
+Testing can currently be done with the single test file by just running it with:
+
+    ./concordance.spec.py
+
