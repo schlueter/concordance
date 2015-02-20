@@ -32,8 +32,9 @@ class Concordance:
         for number, page in enumerate(book.get_pages()):
             words = set(re.sub(NON_WORD_CHARACTER_REGEX, '', page).split(' '))
             for word in words:
-                if not word in concordance:
-                    concordance[word] = set()
-                concordance[word].add(number)
+                if word:
+                    if not word in concordance:
+                        concordance[word] = set()
+                    concordance[word].add(number + 1)
         return concordance
 
