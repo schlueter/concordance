@@ -3,14 +3,12 @@
 
 import re
 
+NON_WORD_CHARACTER_REGEX = r'[--.,!?¿¡"/\\\(\)\[\]\{\}:;\n]'
 
 class Concordance:
     """An object to represent a book and it's concordance, which this class will
     create from the text
     """
-
-
-    NON_WORD_CHARACTER_REGEX = r'[--.,!?¿¡"/\\\(\)\[\]\{\}:;\n]'
 
     def __init__(self, book):
         """Initialize pages to the pages supplied in the first argument and
