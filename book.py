@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# coding: utf-8
+
 class Book:
     """An object to represent a book and it's concordance, which this class will
     create from the text
