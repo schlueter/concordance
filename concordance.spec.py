@@ -235,23 +235,24 @@ The fair Ophelia!- Nymph, in thy orisons''',
         )
 
         self.simple_book_concordace_data = {
-            'Apple': [1,2,3],
-            'Banana': [1,5],
-            'Zebra': [3]
+            'Apple': set([1,2,3]),
+            'Banana': set([1,5]),
+            'Zebra': set([3])
         }
 
     def test_concordance(self):
+        self.assertEqual.__self__.maxDiff = None
         test_book_concordance = concordance.Concordance(self.test_book)
         self.assertEqual(
-            test_book_concordance_data,
-            test_book_concordance.__dict__['corcordance']
+            self.test_book_concordance_data,
+            test_book_concordance.__dict__['concordance']
         )
 
     def test_simple_concordance(self):
         test_simple_concordance = concordance.Concordance(self.simple_book)
         self.assertEqual(
             self.simple_book_concordace_data,
-            test_simple_concordance.__dict__['corcordance']
+            test_simple_concordance.__dict__['concordance']
         )
 
 
