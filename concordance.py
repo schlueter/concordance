@@ -38,3 +38,28 @@ class Concordance:
                     concordance[word].add(number + 1)
         return concordance
 
+    def __unicode__(self):
+        output_list = []
+        concordance = self.concordance
+        words = concordance.keys()
+
+        word_width = reduce(lambda x, y: x if x > y else y,
+                            map(lambda x: len(x), words))
+
+        word_output = r'{:<%s} {}' % word_width
+
+        words.sort()
+
+        for word in words:
+            if word:
+                page_numbers = list(concordance[word])
+                page_numbers.sort()
+                output_list.append(word_output.format(
+                    word,
+                    r','.join(map(lambda x: str(x), page_numbers))
+                ))
+
+        return '\n'.join(output_list)
+
+    def __str__(self):
+        return unicode(self).encode('utf-8')
