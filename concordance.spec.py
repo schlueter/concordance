@@ -50,6 +50,9 @@ The fair Ophelia!- Nymph, in thy orisons''',
               ]
         )
 
+        """This is questionable test data as it is simply the content
+        of a concordance instance build from the above book with an
+        early version of this codebase"""
         self.test_book_concordance_data = {
             "'Tis": set([4]),
             "'tis": set([1]),
