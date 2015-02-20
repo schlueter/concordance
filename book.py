@@ -17,3 +17,9 @@ class Book:
         """
         self.pages = pages
         self.title = title
+
+    def get_pages(self):
+        return self.pages
+
+    def get_title(self):
+        return self.title

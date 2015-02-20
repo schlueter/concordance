@@ -31,7 +31,7 @@ class Concordance:
         book ::= A Book object.
         """
         concordance = {}
-        for number, page in enumerate(book):
+        for number, page in enumerate(book.get_pages()):
             words = set(re.sub(NON_WORD_CHARACTER_REGEX, '', page).split(' '))
             for word in words:
                 if not word in concordance:
