@@ -18,9 +18,9 @@ class Concordance:
 
         book ::= A Book object.
         """
-        self.concordance = self.run_concordancer(book)
+        self.concordance = self.__run_concordancer(book)
 
-    def run_concordancer(self, book):
+    def __run_concordancer(self, book):
         """Runs the concordancer on the pages of the book to create
         a concordance.
 
